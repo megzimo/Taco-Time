@@ -1,11 +1,11 @@
-### Schema
-
+DROP DATABASE IF EXISTS tacotime_db;
 CREATE DATABASE tacotime_db;
 USE tacotime_db;
 
 CREATE TABLE tacos
 (
-	id int NOT NULL AUTO_INCREMENT,
-	name varchar(255) NOT NULL,
+	id INT NOT NULL AUTO_INCREMENT,
+	name VARCHAR(255) NOT NULL,
+	devoured BOOLEAN,
 	PRIMARY KEY (id)
 );
