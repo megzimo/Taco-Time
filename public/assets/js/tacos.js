@@ -1,19 +1,19 @@
+// Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
-    $(".change-sleep").on("click", function(event) {
+    $(".change-taco").on("click", function(event) {
       var id = $(this).data("id");
-      var newSleep = $(this).data("newsleep");
-  
-      var newSleepState = {
-        sleepy: newSleep
+      var newState = {
+        devoured: true
       };
   
+  
       // Send the PUT request.
-      $.ajax("/api/cats/" + id, {
+      $.ajax("/api/tacos/" + id, {
         type: "PUT",
-        data: newSleepState
+        data: newState
       }).then(
         function() {
-          console.log("changed sleep to", newSleep);
+          console.log("changed taco state to", newState);
           // Reload the page to get the updated list
           location.reload();
         }
@@ -24,33 +24,33 @@ $(function() {
       // Make sure to preventDefault on a submit event.
       event.preventDefault();
   
-      var newCat = {
-        name: $("#ca").val().trim(),
-        sleepy: $("[name=sleepy]:checked").val().trim()
+      var newTaco = {
+        name: $("#userTacoName").val().trim(),
+        devoured: 0
       };
   
       // Send the POST request.
-      $.ajax("/api/cats", {
+      $.ajax("/api/tacos", {
         type: "POST",
-        data: newCat
+        data: newTaco
       }).then(
         function() {
-          console.log("created new cat");
+          console.log("created new taco");
           // Reload the page to get the updated list
           location.reload();
         }
       );
     });
   
-    $(".delete-cat").on("click", function(event) {
+    $(".delete-taco").on("click", function(event) {
       var id = $(this).data("id");
   
       // Send the DELETE request.
-      $.ajax("/api/cats/" + id, {
+      $.ajax("/api/tacos/" + id, {
         type: "DELETE"
       }).then(
         function() {
-          console.log("deleted cat", id);
+          console.log("deleted taco ", id);
           // Reload the page to get the updated list
           location.reload();
         }
