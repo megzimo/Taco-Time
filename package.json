@@ -19,5 +19,13 @@
     "handlebars-helper-css": "^0.1.0"
   },
   "keywords": [],
-  "description": ""
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/megzimo/Taco-Time.git"
+  },
+  "bugs": {
+    "url": "https://github.com/megzimo/Taco-Time/issues"
+  },
+  "homepage": "https://github.com/megzimo/Taco-Time#readme"
 }
