@@ -1,9 +1,8 @@
 <li>
 	{{name}}
 
-	<button class="change-taco" data-id="{{id}}">
-		{{#if devoured}}NOMNOM TIME!{{else}}Gone!{{/if}}
+	<button type="button" class="btn btn-outline-success btn-sm change-taco" data-id="{{id}}">
+		{{#if devoured}}nom nom nom!{{else}}Sold Out!{{/if}}
 	</button>
 
-	<button class="delete-taco" data-id="{{this.id}}">DELETE!</button>
 </li>

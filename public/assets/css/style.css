@@ -1,24 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+@import url('https://fonts.googleapis.com/css?family=Nova+Square');
+
+
 li {
-    padding: 5px;
-    margin: 5px;
-    background: #faebd7;
-  }
-  
-  .label {
-    font-weight: bold;
-  }
-  
-  .create-update-form {
-    padding: 5px;
-    margin: 5px;
-    background: aqua;
-  }
-  
-  .form-group {
-    margin-bottom: 5px;
-  }
-  
-  body{
-    background-image: url("../images/tacotime.jpg")
-  }
-  
+  padding: 5px;
+  margin: 5px;
+  list-style-type: none;
+  font-family: 'Nova Square', cursive;
+  font-size: 2rem;
+}
+
+.form-label {
+  text-align: center;
+  font-family: 'Nova Square', cursive;
+  font-size: 1.5rem;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: aqua;
+}
+
+.form-group {
+  margin-bottom: 5%;
+}
+
+body {
+  background-color: #2c363f;
+  background-image: url("../images/tacotime.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 97%;
+  /* padding: 1.5%; */
+}
+
+h1,
+h2 {
+  font-family: 'Press Start 2P', cursive;
+}
+
+.heading {
+  color: #cad805;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+#tacoForm {
+  text-align: center;
+  padding-top: 2%;
+}
+
+#tacoBtn {
+  margin-bottom: 2%;
+}
+
+#toBeEaten,
+#devoured {
+  text-align: center;
+  margin: 3%;
+  /* padding-top: 2%; */
+}
+
+#eaten {
+  text-align: center;
+}
+
+.needBelly {
+  background-color: rgba(223, 165, 91, 0.6);
+  border: 1px solid #56100f;
+  border-radius: 20px;
+}
+
+.nommed {
+  background-color: rgba(223, 165, 91, 0.6);
+  border: 1px solid #56100f;
+  border-radius: 20px;
+}
+
+.list {
+  margin-top: 7%;
+}
+
+.addTaco {
+  margin-top: 3%;
+}
+
+
+.addTacoForm {
+  background-color: rgba(178, 191, 226, 0.6);
+  border-radius: 20px;
+}
+
+
+.lists{
+  margin-top: 3%;
+  margin-left: 2%;
+}
