@@ -23,11 +23,26 @@ $(function() {
     $(".create-form").on("submit", function(event) {
       // Make sure to preventDefault on a submit event.
       event.preventDefault();
+
+      function validate(){
+        let isValid = true;
+        $(".form-control").each(function(){
+            if($(this).val() === ""){
+                isValid = false
+            };
+        });
+        return isValid;
+    }
+    if(validate()){
   
       var newTaco = {
         name: $("#userTacoName").val().trim(),
         devoured: 0
       };
+    } else {
+      alert("How can you eat a taco that doesn't exist?! Please provide a taco name!!")
+    }
+
   
       // Send the POST request.
       $.ajax("/api/tacos", {
